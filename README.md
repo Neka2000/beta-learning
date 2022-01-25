@@ -97,4 +97,31 @@ if(array.length){
 }
 ```
 
-Since if the array length is 0, it will be false, since 0 is a falsy value.
+If the array length is 0, it will be false, since 0 is a falsy value.
+
+### Difference between == and ===
+
+While == compares the operands, not taking into account their types since it transforms the operators to the same type, the === is a strict equality operand, since it also takes into account the type of each operand when comparing them.
+
+This can be seen in the following example:
+```
+const a = 123;
+const b = '123';
+
+if(a == b){
+    return 'Using ==';
+}
+```
+
+This will enter the if condition since a and b have the same value.
+But if we use === like so:
+```
+const a = 123;
+const b = '123';
+
+if(a === b){
+    return 'Using ==';
+}
+```
+
+This will not enter the if condition because we are using ===, so even though a and b have the same value, their type is different.
