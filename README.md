@@ -60,3 +60,35 @@ function exampleFunction(){
 };
 console.log(functionVar) //logs an error since the var is not defined
 ```
+
+### Truthy and Falsy values
+
+A truthy value is a value thats considered true when used in a boolean context, and the same applies to a falsy value, but this one is considered false.
+
+Here are some examples of falsy values:
+
+- false
+- 0
+- -0
+- undefined
+- null
+- ""
+- NaN
+
+Every other value is considered truthy, which means they will be considered to be true in a boolean context.
+
+So instead of doing the following:
+```
+if(array.length > 0){
+    return 'example';
+}
+```
+
+You can simply do:
+```
+if(array.length){
+    return 'example';
+}
+```
+
+Since if the array length is 0, it will be false, since 0 is a falsy value.
