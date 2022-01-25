@@ -125,3 +125,23 @@ if(a === b){
 ```
 
 This will not enter the if condition because we are using ===, so even though a and b have the same value, their type is different.
+
+### Conditional ternary operator
+
+This operator takes three operands:
+
+- A condition, which is followed by a question mark(?);
+- An expression that is executed if the previous condition is truthy and is followed by a colon(:);
+- And another expression that is executed if the condition is falsy.
+
+Here is an example:
+```
+const isTrue = true;
+const example = isTrue ? 'true' : 'false';
+```
+
+The *const* example will take the value 'true', since thats what the conditional ternary operator will return.
+Simplified, it's structure should look something like the following:
+```
+condition ? expressionIfTrue : expressionIfFalse
+```
