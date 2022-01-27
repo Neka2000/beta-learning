@@ -145,3 +145,27 @@ Simplified, it's structure should look something like the following:
 ```
 condition ? expressionIfTrue : expressionIfFalse
 ```
+
+### Functions and arrow functions
+
+Normal functions and arrow functions work in a very similar way but have some key differences, the most notable one being their syntax.
+
+Example of a normal function:
+```
+const example = function(arg){
+    return true;
+}
+```
+
+Example of an arrow function with the same behavior:
+ ```
+const example = (arg) => true;
+```
+
+As you can see, arrow functions are shorter and simpler.
+
+Some other differences are:
+
+- Arrow functions do not have arguments binding;
+- Arrow functions do not have their own *this*, instead the value of *this* inside an arrow function is bound to the value of *this* of the closest non-arrow parent function;
+- Regular functions, unlike arrow functions, are constructible and can be called using the *new* keyword.
