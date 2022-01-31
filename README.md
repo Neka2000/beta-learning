@@ -50,11 +50,23 @@ The following code will also not work:
 const example = "test";
 const example = "modified test";
 ```
-Contrary to a *let* variable, a *const* cannot be modified.
+
+On objects and arrays you can change the content of a *const* variable, as you can see here:
+```
+const example = {
+    key: 'value'
+};
+example.key = '123';
+
+const exampleArray = [1];
+exampleArray.push(2);
+```
+
+Contrary to a *let* variable, a *const* cannot be modified if it's not an object or an array.
 
 - *var*
 
-*var* variables are not block-scoped and can be used globally when declared outside a function. If declared inside a function, it is function-scoped, only being accessible inside that function. They can also be re-declared and updated.
+*var* variables are not block-scoped and can be used globally when declared outside a function. The scope of a variable declared with *var* is its current execution context and closures thereof, which is either the enclosing function and functions declared within it, or, for variables declared outside any function, global. They can also be re-declared and updated.
 
 The following code shows a working example:
 ```
@@ -66,6 +78,14 @@ function exampleFunction(){
 };
 console.log(functionVar) //logs an error since the var is not defined
 ```
+
+A *var* can also be used before being declared and still works, as you can see here:
+```
+example = 'test';
+var example = 'new test';
+```
+
+This is possible because of hoisting, since variable declarations are processed before any code is executed.  
 
 ### Truthy and Falsy values
 
@@ -98,6 +118,19 @@ if(array.length){
 ```
 
 If the array length is 0, it will be false, since 0 is a falsy value.
+
+This can sometimes lead to errors though.
+In the following example, we can see a situation where 0 being a falsy value is not desired:
+```
+const getFlagId = flagId => {
+    if(flagId) {
+        return 'Flag ID is ${flagId}';
+    }
+    return 'Flag ID does not exist';
+}
+```
+
+Here we want to check if the flagId exists, but if the Id is 0, it will not enter then if statement since 0 is a falsy value, even though 0 is a valid flagId.
 
 ### Difference between == and ===
 
