@@ -233,13 +233,17 @@ In the following code snippet we can se an example of a function that creates a 
 <html>
     <head>
     <script>
+
         //Will run the function when the document is loaded
         window.onload = function() {
+
             //Creates the element
             const span = document.createElement("span");
+
             //Adds content to the element
             const span_text = document.createTextNode("example");
             span.appendChild(span_text);
+            
             //Adds element to the document
             document.body.appendChild(span);
         }
