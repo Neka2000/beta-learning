@@ -202,3 +202,11 @@ Some other differences are:
 - Arrow functions do not have arguments binding;
 - Arrow functions do not have their own *this*, instead the value of *this* inside an arrow function is bound to the value of *this* of the closest non-arrow parent function;
 - Regular functions, unlike arrow functions, are constructible and can be called using the *new* keyword.
+
+### The DOM and events
+
+#### The DOM
+
+The DOM is the Document Objet Model of a web page. It is constructed as a tree of Objects that looks like the following:
+
+![DOM Tree of Objects](/images/img_htmltree.gif "HTML Tree of Objects")
