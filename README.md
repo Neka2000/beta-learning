@@ -208,6 +208,7 @@ Some other differences are:
 #### The DOM
 
 The DOM is the Document Objet Model of a web page. It is constructed as a tree of Objects that looks like the following:
+
 ![DOM Tree of Objects](/images/img_htmltree.gif "HTML Tree of Objects")
 
 Using this model, JavaScript is able to interact with all the HTML elements of a page:
@@ -222,3 +223,29 @@ One of the ways to change the HTML elements of a page is through the *querySelec
 const spans = document.querySelectorAll("span");
 ```
 This will return an array where spans[0] is the first `<span>` element and so on.
+
+Without the DOM, JavaScript wouldn't have a model or notion of web pages, HTML documents and their component parts. Al of the elements of the document objet model can be accessed and manipulated using the DOM and any scripting language, but in this case we are focusing on JavaScript.
+
+To access the DOM you don't have to do anything special, since you use the API directly within a script thats run by the browser.
+
+In the following code snippet we can se an example of a function that creates a new `<span>` element, adds text to it and adds it to the document:
+```
+<html>
+    <head>
+    <script>
+        //Will run the function when the document is loaded
+        window.onload = function() {
+            //Creates the element
+            const span = document.createElement("span");
+            //Adds content to the element
+            const span_text = document.createTextNode("example");
+            span.appendChild(span_text);
+            //Adds element to the document
+            document.body.appendChild(span);
+        }
+    </script>
+    </head>
+    <body>
+    </body>
+</html>
+```
