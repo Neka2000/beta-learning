@@ -224,11 +224,11 @@ const spans = document.querySelectorAll("span");
 ```
 This will return an array where spans[0] is the first `<span>` element and so on.
 
-Without the DOM, JavaScript wouldn't have a model or notion of web pages, HTML documents and their component parts. Al of the elements of the document objet model can be accessed and manipulated using the DOM and any scripting language, but in this case we are focusing on JavaScript.
+Without the DOM, JavaScript wouldn't have a model or notion of web pages, HTML documents and their component parts. All of the elements of the document object model can be accessed and manipulated using the DOM and any scripting language, but in this case we are focusing on JavaScript.
 
-To access the DOM you don't have to do anything special, since you use the API directly within a script thats run by the browser.
+To access the DOM you don't have to do anything special, since you use the API directly in JavaScript from within a script thats run by the browser.
 
-In the following code snippet we can se an example of a function that creates a new `<span>` element, adds text to it and adds it to the document:
+In the following code snippet we can se an example of a function that creates a new `<span>` element, adds content to it and adds it to the document:
 ```
 <html>
     <head>
@@ -243,7 +243,7 @@ In the following code snippet we can se an example of a function that creates a 
             //Adds content to the element
             const span_text = document.createTextNode("example");
             span.appendChild(span_text);
-            
+
             //Adds element to the document
             document.body.appendChild(span);
         }
