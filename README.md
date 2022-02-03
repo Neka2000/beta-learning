@@ -87,7 +87,7 @@ var example = 'new test';
 
 This is possible because of hoisting, since variable declarations are processed before any code is executed.  
 
-### Truthy and Falsy values
+#### Truthy and Falsy values
 
 A truthy value is a value thats considered true when used in a boolean context, and the same applies to a falsy value, but this one is considered false.
 
@@ -130,9 +130,9 @@ const getFlagId = flagId => {
 }
 ```
 
-Here we want to check if the flagId exists, but if the Id is 0, it will not enter then if statement since 0 is a falsy value, even though 0 is a valid flagId.
+Here we want to check if the flagId exists, but if the Id is 0, it will not enter the if statement since 0 is a falsy value, even though 0 is a valid flagId.
 
-### Difference between == and ===
+#### Difference between == and ===
 
 While == compares the operands, not taking into account their types since it transforms the operators to the same type, the === is a strict equality operand, since it also takes into account the type of each operand when comparing them.
 
@@ -159,7 +159,7 @@ if(a === b){
 
 This will not enter the if condition because we are using ===, so even though a and b have the same value, their type is different.
 
-### Conditional ternary operator
+#### Conditional ternary operator
 
 This operator takes three operands:
 
@@ -173,13 +173,13 @@ const isTrue = true;
 const example = isTrue ? 'true' : 'false';
 ```
 
-The *const* example will take the value 'true', since thats what the conditional ternary operator will return.
+The const *example* will take the value 'true', since thats what the conditional ternary operator will return.
 Simplified, it's structure should look something like the following:
 ```
 condition ? expressionIfTrue : expressionIfFalse
 ```
 
-### Functions and arrow functions
+#### Functions and arrow functions
 
 Normal functions and arrow functions work in a very similar way but have some key differences, the most notable one being their syntax.
 
