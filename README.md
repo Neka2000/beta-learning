@@ -217,8 +217,8 @@ Using this model, JavaScript is able to interact with all the HTML elements of a
 - It can change the CSS styles;
 - It can create and react to HTML events.
 
-One of the ways to change the HTML elements of a page is through the *querySelectorAll* method. In the following code we can see an example of this method being used to return all the <span> elements of the document:
+One of the ways to change the HTML elements of a page is through the *querySelectorAll* method. In the following code we can see an example of this method being used to return all the `<span>` elements of the document:
 ```
 const spans = document.querySelectorAll("span");
 ```
-This will return an array where spans[0] is the first <span> element and so on.
+This will return an array where spans[0] is the first `<span>` element and so on.
