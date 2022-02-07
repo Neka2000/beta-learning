@@ -253,3 +253,25 @@ In the following code snippet we can se an example of a function that creates a 
     </body>
 </html>
 ```
+
+#### Events
+
+Events are actions that happen in the application to which you code can react to.
+A simple example is if a user clicks on a button on a webpage, you probably want to react to that action. Thats what events are for.
+
+In the following code snippet we can see an example of a click event:
+```
+const btn = document.querySelector('button'); //Selecting the button to which the event will be attached
+
+function random(number) {
+    return Math.floor(Math.random() * (number + 1));
+}
+
+btn.addEventListener('click', () => { //Creates a 'click' event on the button
+    const randomColor = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
+    document.body.style.backgroundColor = randomColor;
+})
+```
+
+This is an example of a click event but there are many other events like `focus`, `mouseover`, `dbclick` and so on.
+Events can also be attached to almost any element of a webpage, but there are some events specific to some elements.
