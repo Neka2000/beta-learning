@@ -306,3 +306,18 @@ Git is a version control system that tracks the changes in files and allows mult
 
 ### Advanced Commands
 
+#### Git Branch
+
+`git branch <branch_name>` is used to create a new branch which allows the user to work in parallel to the master branch.
+
+#### Git Checkout
+
+`git checkout <branch_name>` is used to switch the branch the user is working on.
+
+#### Git Rebase
+
+Similar to `git merge`, `git rebase <base>` integrates two branches, with the exception that `git rebase` rewrites the commit history.
+
+#### Git Cherry-Pick
+
+`git cherry-pick <commit_hash>` is used to pick a commit from a branch and apply it to any other branch.
