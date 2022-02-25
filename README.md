@@ -275,3 +275,34 @@ btn.addEventListener('click', () => { //Creates a 'click' event on the button
 
 This is an example of a click event but there are many other events like `focus`, `mouseover`, `dbclick` and so on.
 Events can also be attached to almost any element of a webpage, but there are some events specific to some elements.
+
+## Git
+
+Git is a version control system that tracks the changes in files and allows multiple people to coordinate their work.
+### Fundamentals
+
+#### Git Add
+
+`git add` is used to add a file that is in the working directory to the staging area.
+
+#### Git Commit
+
+`git commit` is used to add the staged files to the local repository.
+
+#### Git Push
+
+`git push` is used to add the committed files from the local repository to the remote repository.
+
+#### Git Fetch
+
+`git fetch` is used to get files from the remote repository to the local repository but not into the working directory.
+
+#### Git Merge
+
+`git merge` is used to get the files from the local repository into the working directory.
+#### Git Pull
+
+`git pull` is basically a junction of `git fetch` followed by `git merge`. It is used to get files from the remote repository directly into the working directory.
+
+### Advanced Commands
+
